@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements
         String token = FirebaseInstanceId.getInstance().getToken();
         String msg = getString(R.string.message_token_format, token);
         Log.d(LOG_TAG, msg);
+       // PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener();
 
     }
 
