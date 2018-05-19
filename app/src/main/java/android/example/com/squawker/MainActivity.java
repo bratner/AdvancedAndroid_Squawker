@@ -21,6 +21,7 @@ import android.database.Cursor;
 import android.example.com.squawker.following.FollowingPreferenceActivity;
 import android.example.com.squawker.provider.SquawkContract;
 import android.example.com.squawker.provider.SquawkProvider;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -113,12 +114,12 @@ public class MainActivity extends AppCompatActivity implements
         
         // Gets the extra data from the intent that started the activity. For *notification*
         // messages, this will contain key value pairs stored in the *data* section of the message.
-        Bundle extras = getIntent().getExtras();
-        // Checks if the extras exist and if the key "test" from our FCM message is in the intent
-        if (extras != null && extras.containsKey("test")) {
-            // If the key is there, print out the value of "test"
-            Log.d(LOG_TAG, "Contains: " + extras.getString("test"));
-        }
+//        Bundle extras = getIntent().getExtras();
+//        // Checks if the extras exist and if the key "test" from our FCM message is in the intent
+//        if (extras != null && extras.containsKey("test")) {
+//            // If the key is there, print out the value of "test"
+//            Log.d(LOG_TAG, "Contains: " + extras.getString("test"));
+//        }
 
 
         // Get token from the ID Service you created and show it in a log
@@ -171,4 +172,5 @@ public class MainActivity extends AppCompatActivity implements
     public void onLoaderReset(Loader<Cursor> loader) {
         mAdapter.swapCursor(null);
     }
+
 }

@@ -40,6 +40,7 @@ dependencies {
 
     // Firebase dependency
     compile 'com.google.firebase:firebase-messaging:10.0.1'
+
 }
 // Apply the Google Services plugin. Make sure to add the google-services.json file in the app
 // folder. You download it from the Firebase console
